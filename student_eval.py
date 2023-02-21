@@ -4,7 +4,6 @@
 # - teacher_1
 # - teacher_2
 # - Columns: Reason, Score, Confidence, Alert
-# $ python student_eval.py <file_name>
 # will only work on mac
 
 from docx import Document
@@ -37,7 +36,6 @@ def extract_information(file):
 
         x = all_text.split("  ")
         length = len(x)
-        # data = []
         for i in range(length):
             string = x[i]
 
@@ -131,10 +129,8 @@ def create_table_doc(data, file):
 
     document.add_heading('SCORES', 0)
 
-    # p = document.add_paragraph('A plain paragraph having some ')
-    # p.add_run('bold').bold = True
-    # p.add_run(' and some ')
-    # p.add_run('italic.').italic = True
+    p = document.add_paragraph('Name: ')
+    p.add_run('bold').bold = True
 
     # document.add_heading('Heading, level 1', level=1)
     # document.add_paragraph('Intense quote', style='Intense Quote')
